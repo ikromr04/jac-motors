@@ -1,0 +1,13 @@
+.main-logo {
+  cursor: pointer;
+  transition: 0.3s;
+
+  @include desktop {
+    width: 116px;
+    height: auto;
+
+    .header-sticky .page-header & {
+      width: 72px;
+    }
+  }
+}

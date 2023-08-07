@@ -1,0 +1,80 @@
+@import "global/_fonts.scss";
+@import "global/_normalize.scss";
+@import "global/_variables.scss";
+@import "global/mixins.scss";
+@import "global/_global.scss";
+
+@import "blocks/_page.scss";
+@import "blocks/_page-header.scss";
+@import "blocks/_main-navigation.scss";
+@import "blocks/_main-logo.scss";
+@import "blocks/_page-footer.scss";
+@import "blocks/_models.scss";
+@import "blocks/_model-card.scss";
+@import "blocks/_about.scss";
+@import "blocks/_contacts.scss";
+@import "blocks/_modal.scss";
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 32px auto;
+
+  h2 {
+    text-align: start;
+  }
+
+  img {
+    display: flex;
+    max-width: 100%;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 80px;
+    align-items: center;
+
+    h2 {
+      grid-column: span 2;
+    }
+  }
+}
+
+.awards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+
+  img {
+    display: flex;
+    max-width: 100%;
+    object-fit: contain;
+
+    @include desktop {
+      width: 260px;
+      height: 205px;
+    }
+  }
+
+  h2 {
+    text-align: start;
+  }
+
+  &>div {
+    box-shadow: 0 0 12px 4px rgba(75, 75, 75, .08);
+    border-radius: 4px;
+    padding: 40px 35px;
+    background-color: #fff;
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 32px;
+      padding-right: 120px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.contacts {
+  padding-bottom: 24px;
+
+  dl {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    div {
+      display: grid;
+      grid-template-columns: 100px auto;
+      gap: 16px;
+
+      dt {
+        font-weight: bold;
+      }
+
+      dd {
+        margin: 0;
+        display: flex;
+        gap: 16px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    padding-bottom: 32px;
+
+    dl {
+      div {
+        grid-template-columns: 160px auto;
+      }
+    }
+  }
+
+  @include desktop {
+    padding-bottom: 40px;
+  }
+}

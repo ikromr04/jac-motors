@@ -1,0 +1,28 @@
+.page {
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: "DIN Pro", "Arial", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $primary-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary-color;
+  }
+}

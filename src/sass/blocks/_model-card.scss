@@ -1,0 +1,21 @@
+.model-card {
+  text-align: center;
+}
+
+.model-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5/2;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.model-card__title {
+  margin: 0;
+}
+
+.model-card__category {
+  text-transform: uppercase;
+  margin: 0;
+}

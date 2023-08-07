@@ -1,0 +1,76 @@
+.page-header {
+  background-color: white;
+  padding: 8px 5vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  transition: 0.3s;
+  
+  @include tablet {
+    padding: 16px 5vw;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  
+  @include desktop {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    gap: 56px;
+
+    .header-sticky & {
+      padding: 8px 5vw;
+    }
+  }
+}
+
+.page-header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+
+  & svg:last-of-type {
+    display: none;
+  }
+
+  .menu-shown & svg:last-of-type {
+    display: inline;
+  }
+
+  .menu-shown & svg:first-of-type {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.page-header__symbol {
+  visibility: hidden;
+  display: none;
+  transition: 0.3s;
+
+  @include tablet {
+    visibility: visible;
+    display: block;
+    width: 80px;
+    height: auto;
+  }
+
+  @include desktop {
+    width: 120px;
+
+    .header-sticky & {
+      width: 100px;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.swiper {
+  width: 100vw;
+}
+
+video {
+  display: block;
+  aspect-ratio: 1920/780;
+  object-fit: cover;
+  width: 100%;
+}
+
+.swiper-models {
+  max-width: 100%;
+  overflow: visible;
+
+  .swiper-slide {
+    opacity: 0.5;
+    transition: 0.3s;
+
+    &-active {
+      opacity: 1;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    transform: scale(0.5);
+  }
+}
+
+.title {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.button {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #1d1d1d;
+  background-color: transparent;
+  min-height: 42px;
+  transition: 0.3s;
+
+  @include desktop {
+    &:hover {
+      border: 1px solid #fff;
+      color: #fff;
+      background-color: #cc000e;
+    }
+  }
+}
+
+.test-drive {
+  cursor: pointer;
+}
