@@ -27,39 +27,40 @@ new Swiper('.swiper-models', {
   },
 });
 
-document.addEventListener('click', (evt) => {
-  if (evt.target.closest('.test-drive')) {
-    document.body.classList.add('modal-shown');
-  }
-  if (evt.target.closest('.modal__close') || evt.target.tagName === 'DIALOG') {
-    document.body.classList.remove('modal-shown');
-  }
-});
+// document.addEventListener('click', (evt) => {
+//   if (evt.target.closest('.test-drive')) {
+//     document.body.classList.add('modal-shown');
+//   }
+//   if (evt.target.closest('.modal__close') || evt.target.tagName === 'DIALOG') {
+//     document.body.classList.remove('modal-shown');
+//   }
+// });
 
-document.querySelector('.modal__form')
-  .addEventListener('submit', (evt) => {
-    evt.preventDefault();
-    document.body.classList.remove('modal-shown');
-  });
+// document.querySelector('.modal__form')
+//   .addEventListener('submit', (evt) => {
+//     evt.preventDefault();
+//     document.body.classList.remove('modal-shown');
+//   });
 
-let inactivityTime = function () {
-  let time;
-  window.onload = resetTimer;
-  document.addEventListener('mousemove', () => {
-    resetTimer();
-  });
-  document.addEventListener('keypress', () => {
-    resetTimer();
-  });
+// let inactivityTime = function () {
+//   let time;
+//   window.onload = resetTimer;
+//   document.addEventListener('mousemove', () => {
+//     resetTimer();
+//   });
+//   document.addEventListener('keypress', () => {
+//     resetTimer();
+//   });
 
-  function logout() {
-    document.body.classList.add('modal-shown');
-  }
-  function resetTimer() {
-    clearTimeout(time);
-    time = setTimeout(logout, 10000)
-  }
-};
+//   function logout() {
+//     document.body.classList.add('modal-shown');
+//   }
+//   function resetTimer() {
+//     clearTimeout(time);
+//     time = setTimeout(logout, 10000)
+//   }
+// };
+
 window.onload = function () {
   inactivityTime();
 }
